@@ -1,0 +1,84 @@
+{
+  "cli": {
+    "version": ">= 5.9.1",
+    "appVersionSource": "remote",
+    "requireCommit": true
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      },
+      "android": {
+        "gradleCommand": ":app:assembleDebug"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": false,
+        "buildConfiguration": "Release"
+      },
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease",
+        "env": {
+          "EXPO_NO_TEMP_DIR": "1"
+        }
+      }
+    },
+    "firebase-fix": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": false,
+        "buildConfiguration": "Release"
+      },
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease",
+        "env": {
+          "EXPO_NO_TEMP_DIR": "1",
+          "EXPO_DEBUG": "true",
+          "NODE_OPTIONS": "--max_old_space_size=4096",
+          "GRADLE_OPTS": "-Dorg.gradle.jvmargs=-Xmx4096m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
+        }
+      }
+    },
+    "production": {
+      "ios": {
+        "buildConfiguration": "Release"
+      },
+      "android": {
+        "buildType": "app-bundle",
+        "env": {
+          "EXPO_NO_TEMP_DIR": "1"
+        }
+      }
+    },
+    "test": {
+      "ios": {
+        "simulator": true,
+        "buildConfiguration": "Debug"
+      },
+      "android": {
+        "gradleCommand": ":app:assembleDebug",
+        "withoutCredentials": true,
+        "env": {
+          "EXPO_DEBUG": "true",
+          "NODE_OPTIONS": "--max_old_space_size=4096"
+        }
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "YOUR_APPLE_ID",
+        "ascAppId": "YOUR_APP_STORE_CONNECT_APP_ID",
+        "appleTeamId": "YOUR_APPLE_TEAM_ID"
+      }
+    }
+  }
+}

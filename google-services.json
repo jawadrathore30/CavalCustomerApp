@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "747419763478",
+    "firebase_url": "https://eco-share-92ef1-default-rtdb.firebaseio.com",
+    "project_id": "eco-share-92ef1",
+    "storage_bucket": "eco-share-92ef1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747419763478:android:2a27c6cb85ad28922c8637",
+        "android_client_info": {
+          "package_name": "com.caval.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747419763478-ddgbe8t8vclif3b7iafpbtm286c9aolo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMQW59pFle0vVp0xotmnpVTYqAlTbdbQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747419763478-ddgbe8t8vclif3b7iafpbtm286c9aolo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "747419763478-da4u87mda5cc2j020le5l21snd9h59p0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.caval.courier.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747419763478:android:32f44f9a3306b9c32c8637",
+        "android_client_info": {
+          "package_name": "com.misscoding.ecoshare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747419763478-ddgbe8t8vclif3b7iafpbtm286c9aolo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMQW59pFle0vVp0xotmnpVTYqAlTbdbQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747419763478-ddgbe8t8vclif3b7iafpbtm286c9aolo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "747419763478-da4u87mda5cc2j020le5l21snd9h59p0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.caval.courier.ios"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
