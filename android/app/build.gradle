@@ -89,13 +89,13 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.caval.app'
+    namespace 'com.misscoding.ecoshare'
     defaultConfig {
-        applicationId 'com.caval.app'
+        applicationId 'com.misscoding.ecoshare'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 5
-        versionName "5.0.0"
+        versionCode 103
+        versionName "1.0.0"
         
         // Suppress package attribute warnings from dependencies
         manifestPlaceholders = [

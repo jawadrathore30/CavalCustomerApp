@@ -1,4 +1,4 @@
-package com.caval.app
+package com.misscoding.ecoshare
 
 import android.os.Build
 import android.os.Bundle
