@@ -9,7 +9,7 @@ import {
   LogBox,
   ActivityIndicator,
 } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer,DarkTheme } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -54,12 +54,12 @@ LogBox.ignoreLogs(['Warning: ...']); // Ignore non-critical warnings
 function HomeTabs() {
   const { user } = useAuth();
   const userName = user?.firstName || user?.displayName || "User";
-  
+
   console.log('App.js - User from auth context:', user);
   console.log('App.js - userName being passed to HomeScreenWithMap:', userName);
   console.log('App.js - user.firstName:', user?.firstName);
   console.log('App.js - user.displayName:', user?.displayName);
-  
+
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -126,12 +126,12 @@ function HomeTabs() {
         headerShown: false
       })}
     >
-      <Tab.Screen 
-        name="Home" 
+      <Tab.Screen
+        name="Home"
       >
-        {() => <HomeScreenWithMap 
-          userName={userName} 
-          rides={[]} 
+        {() => <HomeScreenWithMap
+          userName={userName}
+          rides={[]}
           bookings={[]}
           notifications={[]}
           messages={[]}
@@ -152,7 +152,7 @@ function HomeTabs() {
 // Create a wrapper component to use the auth context
 const AppContent = () => {
   const { user, loading } = useAuth();
-  
+
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
@@ -164,14 +164,15 @@ const AppContent = () => {
   return (
     <NavigationContainer
       theme={{
+        ...DarkTheme,
         colors: {
+          ...DarkTheme.colors,
           background: '#121212',
           card: '#1e1e1e',
           text: '#ffffff',
           border: '#333333',
           primary: '#ff9f43',
         },
-        dark: true,
       }}
     >
       <Stack.Navigator
