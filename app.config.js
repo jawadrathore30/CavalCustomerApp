@@ -2,7 +2,7 @@ import "dotenv/config"
 
 export default {
   expo: {
-    name: "Eco-share",
+    name: "Caval",
     slug: "Eco-share",
     owner: "zouhair123",
     version: "1.0.0",
