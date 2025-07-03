@@ -26,7 +26,6 @@ import { doc, getDoc, setDoc, updateDoc, serverTimestamp } from "firebase/firest
 import { auth, firestore } from "../firebase.config";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import CustomPhoneInput from "./CustomPhoneInput";
-import { FirebaseRecaptchaVerifierModal } from 'expo-firebase-recaptcha';
 import { firebaseConfig } from '../firebase.config';
 import * as Crypto from 'expo-crypto';
 
@@ -840,11 +839,7 @@ export default function AnimatedLoginScreen() {
       {/* Progress Bar */}
       {renderProgressBar()}
       
-      <FirebaseRecaptchaVerifierModal 
-        ref={recaptchaVerifier} 
-        firebaseConfig={firebaseConfig} 
-      />
-      
+     
       <KeyboardAvoidingView 
         behavior={Platform.OS === "ios" ? "padding" : undefined} 
         style={styles.keyboardView}
