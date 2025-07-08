@@ -31,11 +31,7 @@ extensions.configure(com.facebook.react.ReactSettingsExtension) { ex ->
 }
 expoAutolinking.useExpoModules()
 
-expoAutolinking {
-  exclude("expo-firebase-core")
-}
-
-rootProject.name = 'Eco-share'
+rootProject.name = 'Caval'
 
 expoAutolinking.useExpoVersionCatalog()
 

@@ -7,29 +7,16 @@ import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
 import com.facebook.react.defaults.DefaultReactActivityDelegate
-import com.google.firebase.analytics.FirebaseAnalytics
 
 import expo.modules.ReactActivityDelegateWrapper
 
 class MainActivity : ReactActivity() {
-  private lateinit var firebaseAnalytics: FirebaseAnalytics
-
   override fun onCreate(savedInstanceState: Bundle?) {
     // Set the theme to AppTheme BEFORE onCreate to support
     // coloring the background, status bar, and navigation bar.
     // This is required for expo-splash-screen.
-    setTheme(R.style.AppTheme)
+    setTheme(R.style.AppTheme);
     super.onCreate(null)
-    
-    // Initialize Firebase Analytics
-    firebaseAnalytics = FirebaseAnalytics.getInstance(this)
-    
-    // Log a test event
-    val bundle = Bundle().apply {
-      putString(FirebaseAnalytics.Param.ITEM_ID, "test_event")
-      putString(FirebaseAnalytics.Param.ITEM_NAME, "Firebase Integration Test")
-    }
-    firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_ITEM, bundle)
   }
 
   /**
