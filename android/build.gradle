@@ -2,6 +2,7 @@
 
 buildscript {
   repositories {
+    maven { url 'https://maven-central.storage.googleapis.com/maven2/' }
     google()
     mavenCentral()
   }
